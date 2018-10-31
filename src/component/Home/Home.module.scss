@@ -24,6 +24,24 @@
         }
     }
 
+    .Contact {
+        text-transform: uppercase;
+        color: #ff7400;
+        border: 1px solid #ff7400;
+        border-radius: 5px;
+        background: transparent;
+        padding: 10px 20px;
+        letter-spacing: 3px;
+        font-size: 11px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+            background: #ff7400;
+            color: black;
+        }
+    }
+
     .ImageArea {
         position: absolute;
         top: -10px;

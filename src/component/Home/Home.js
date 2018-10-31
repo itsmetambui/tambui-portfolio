@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Wrapper from '../UI/Wrapper/Wrapper';
 import classes from './Home.module.scss';
 import logoSrc from '../../assets/img/favicon.png';
@@ -18,7 +19,9 @@ const home = () => {
                     <p className={classes.Title}>
                         Fullstack developer /<span> Angular / React / Node</span>
                     </p>
-                    <button className={classes.Contact}>Contact me</button>
+                    <Link className={classes.Contact} to="/contact">
+                        Contact me
+                    </Link>
                 </div>
                 <div className={classes.ImageArea}>
                     <img src={logoSrc} alt="Logo" />
