@@ -1,0 +1,88 @@
+/* eslint jsx-a11y/anchor-is-valid: 0 */
+import React, { Component } from 'react';
+import '../../../assets/js/tag-canvas.min';
+
+class TagCanvas extends Component {
+    componentDidMount() {
+        try {
+            window.TagCanvas.Start('skillChartCanvas', 'tags', options);
+        } catch (e) {
+            // something went wrong, hide the canvas container
+            console.log(e);
+            document.getElementById('skillChartContainer').style.display = 'none';
+        }
+    }
+    render() {
+        const tags = items.map(item => {
+            return (
+                <li>
+                    <a>{item}</a>
+                </li>
+            );
+        });
+        return (
+            <React.Fragment>
+                <div id="skillChartContainer">
+                    <canvas width={this.props.width} height={this.props.height} id="skillChartCanvas">
+                        <p>Tag Canvas</p>
+                    </canvas>
+                </div>
+                <div id="tags">
+                    <ul>{tags}</ul>
+                </div>
+            </React.Fragment>
+        );
+    }
+}
+
+export default TagCanvas;
+
+const options = {
+    textColour: '#ff7400',
+    outlineThickness: 0.5,
+    outlineColour: '#fe0853',
+    maxSpeed: 0.06,
+    freezeActive: true,
+    shuffleTags: true,
+    shape: 'sphere',
+    zoom: 1,
+    noSelect: true,
+    textFont: null,
+    pinchZoom: true,
+    freezeDecel: true,
+    fadeIn: 3000,
+    initial: [0.3, -0.1],
+    depth: 0.8
+};
+
+const items = [
+    'HTML 5',
+    'CSS 3',
+    'JavaScript',
+    'REST',
+    'AJAX',
+    'JSON',
+    'XML',
+    'Angular JS',
+    'Node JS',
+    'Express',
+    'Git',
+    'React',
+    'Bootstrap',
+    'SASS',
+    'RWD',
+    'Mongo DB',
+    'Karma',
+    'Jest',
+    'Gulp',
+    'npm',
+    'Bower',
+    'BEM',
+    'Canvas',
+    'Spring',
+    'Java',
+    'PostgreSQL',
+    'GraphQL',
+    'Jest',
+    'Material'
+];
