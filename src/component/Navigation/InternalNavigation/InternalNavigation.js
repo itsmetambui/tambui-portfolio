@@ -1,14 +1,15 @@
 import React from 'react';
 import classes from './InternalNavigation.module.scss';
+import { NavLink } from 'react-router-dom';
 
 //TODO: handle routing
 const internalNavigation = props => {
     const links = navigationItems.map(item => {
         return (
-            <a key={item.text} href="">
+            <NavLink key={item.text} to={item.route} activeClassName={classes.active} exact>
                 <i className={item.icon} />
                 <span>{item.text}</span>
-            </a>
+            </NavLink>
         );
     });
     const toggleClass = props.toggle ? classes.Show : '';
@@ -22,26 +23,26 @@ const navigationItems = [
     {
         icon: 'fal fa-home',
         text: 'Home',
-        route: ''
+        route: '/'
     },
     {
         icon: 'fal fa-user',
         text: 'About',
-        route: ''
+        route: '/about'
     },
     {
         icon: 'fal fa-fire',
         text: 'Skills',
-        route: ''
+        route: '/skills'
     },
     {
         icon: 'fal fa-book',
         text: 'My work',
-        route: ''
+        route: '/works'
     },
     {
-        icon: 'fal fa-home',
+        icon: 'fal fa-envelope',
         text: 'Contact',
-        route: ''
+        route: '/contact'
     }
 ];

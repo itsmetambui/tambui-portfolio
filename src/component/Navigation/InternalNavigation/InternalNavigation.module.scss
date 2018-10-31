@@ -41,9 +41,11 @@
         }
 
         &:hover,
-        .active {
+        &.active {
             color: #ff7400;
+        }
 
+        &:hover {
             i {
                 opacity: 0;
             }
@@ -69,7 +71,7 @@
         position: static;
         opacity: 1;
 
-        height: 210px;
-        width: 60px;
+        height: 270px;
+        width: 100%;
     }
 }
