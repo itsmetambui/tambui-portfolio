@@ -1,0 +1,66 @@
+.Home {
+    position: relative;
+    padding: 25% 5%;
+    color: white;
+
+    .TextArea {
+        position: relative;
+        z-index: 2;
+
+        .Summary {
+            font-size: 30px;
+            font-weight: 900;
+        }
+
+        .Title {
+            color: #8d8d8d;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+
+            span::before {
+                content: ' ';
+                display: block;
+            }
+        }
+    }
+
+    .ImageArea {
+        position: absolute;
+        top: -10px;
+        right: -15%;
+
+        img {
+            height: 270px;
+        }
+    }
+}
+
+@media screen and (min-width: 530px) {
+    .Home {
+        display: flex;
+        flex-direction: row;
+        padding: 10% 7%;
+
+        .TextArea {
+            .Summary {
+                font-size: 60px;
+            }
+
+            .Title {
+                margin-bottom: 45px;
+
+                span::before {
+                    display: none;
+                }
+            }
+        }
+
+        .ImageArea {
+            transform: translateY(0) rotate(-10deg);
+            right: 5%;
+            img {
+                height: 600px;
+            }
+        }
+    }
+}

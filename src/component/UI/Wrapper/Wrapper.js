@@ -4,9 +4,9 @@ import classes from './Wrapper.module.scss';
 const wrapper = props => {
     return (
         <div className={classes.Wrapper}>
-            <span>&nbsp;&nbsp;&lt;body&gt;</span>
-            <div>{props.children}</div>
-            <span>
+            <span className={classes.tags}>&nbsp;&nbsp;&lt;body&gt;</span>
+            {props.children}
+            <span className={classes.tags}>
                 &nbsp;&nbsp;&lt;/body&gt;
                 <br />
                 &lt;/html&gt;
