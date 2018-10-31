@@ -12,9 +12,9 @@ class TagCanvas extends Component {
     }
 
     render() {
-        const tags = items.map(item => {
+        const tags = items.map((item, idx) => {
             return (
-                <li>
+                <li key={idx}>
                     <a>{item}</a>
                 </li>
             );
