@@ -11,3 +11,4 @@ const logo = props => {
 };
 
 export default logo;
+//TODO: implement routing when click logo
