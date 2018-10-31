@@ -44,7 +44,7 @@ const about = () => {
                     </p>
                 </div>
                 <div className={classes.ImageArea}>
-                    <img src={photoSrc} />
+                    <img src={photoSrc} alt="Avatar" />
                 </div>
             </div>
         </Wrapper>

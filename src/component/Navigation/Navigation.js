@@ -22,9 +22,9 @@ class Navigation extends Component {
                 <InternalNavigation toggle={this.state.showInternalNav} />
                 <ExternalNavigation />
 
-                <a className={classes.NavToggle} onClick={this.toggleInternalNav}>
+                <button className={classes.NavToggle} onClick={this.toggleInternalNav}>
                     <i className="fas fa-bars" />
-                </a>
+                </button>
             </div>
         );
     }
