@@ -1,0 +1,75 @@
+.InternalNav {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    position: fixed;
+    top: 60px;
+    left: 100%;
+    opacity: 0;
+
+    height: 60px;
+    width: 100%;
+    background: #181818;
+
+    transition: all 0.3s ease-out;
+
+    a {
+        display: block;
+        color: #4d4d4e;
+        font-size: 22px;
+        height: 60px;
+        width: 60px;
+        position: relative;
+
+        span,
+        i {
+            display: block;
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            text-transform: uppercase;
+            transition: all 0.3s ease-out;
+        }
+
+        span {
+            font-size: 10px;
+            opacity: 0;
+        }
+
+        &:hover,
+        .active {
+            color: #ff7400;
+
+            i {
+                opacity: 0;
+            }
+
+            span {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.InternalNav.Show {
+    left: 0;
+    opacity: 1;
+}
+
+@media screen and (min-width: 960px) {
+    .InternalNav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        position: static;
+        opacity: 1;
+
+        height: 210px;
+        width: 60px;
+    }
+}
