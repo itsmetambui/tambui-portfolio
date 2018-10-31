@@ -1,9 +1,8 @@
 .Header {
-    margin: 30px auto;
+    margin: 10px auto;
 
     h1 {
-        font-size: 73px;
-        line-height: 63px;
+        font-size: 45px;
         color: #ff7400;
         margin: 5px auto;
     }
@@ -21,5 +20,17 @@
 
     &::after {
         content: '</h1>';
+    }
+}
+
+@media screen and (min-width: 530px) {
+    .Header {
+        margin: 30px auto;
+
+        h1 {
+            font-size: 73px;
+            color: #ff7400;
+            margin: 5px auto;
+        }
     }
 }
