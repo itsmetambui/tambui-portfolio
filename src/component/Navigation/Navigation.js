@@ -4,6 +4,7 @@ import logoImg from '../../assets/img/favicon.png';
 
 import Logo from './Logo/Logo';
 import InternalNavigation from './InternalNavigation/InternalNavigation';
+import ExternalNavigation from './ExternalNavigation/ExternalNavigation';
 
 class Navigation extends Component {
     state = {
@@ -19,23 +20,7 @@ class Navigation extends Component {
             <div className={classes.Header}>
                 <Logo imgSrc={logoImg} text="Tam" />
                 <InternalNavigation toggle={this.state.showInternalNav} />
-                {/* <ul class="external-nav">
-                <li>
-                    <a href="">
-                        <i class="fab fa-linkedin-in" />
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <i class="fab fa-facebook-f" />
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <i class="fab fa-github-alt" />
-                    </a>
-                </li>
-            </ul> */}
+                <ExternalNavigation />
 
                 <a className={classes.NavToggle} onClick={this.toggleInternalNav}>
                     <i className="fas fa-bars" />

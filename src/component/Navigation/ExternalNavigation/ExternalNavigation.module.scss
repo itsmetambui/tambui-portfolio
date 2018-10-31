@@ -1,0 +1,26 @@
+.ExternalNav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+
+    a {
+        color: #4d4d4e;
+        font-size: 13px;
+        transition: all 0.3s ease-out;
+
+        &:hover {
+            color: #ff7400;
+        }
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .ExternalNav {
+        display: none;
+    }
+}
