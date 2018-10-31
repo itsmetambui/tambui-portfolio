@@ -6,7 +6,11 @@
 
     list-style-type: none;
     text-align: center;
-    padding: 0;
+    padding: 15px 0;
+
+    li {
+        margin: 4px 0;
+    }
 
     a {
         color: #4d4d4e;
