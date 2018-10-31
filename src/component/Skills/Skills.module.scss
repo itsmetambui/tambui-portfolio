@@ -1,12 +1,13 @@
 .Skills {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
 
     padding: 0 7%;
 
     .TextArea {
         flex: 1;
+        margin-bottom: 40px;
     }
 
     .Journey {
@@ -20,7 +21,20 @@
         }
     }
 
-    .GlobeArea {
+    .SkillChart {
         flex: 1;
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and(min-width: 960px) {
+    .Skills {
+        flex-direction: row;
+        padding: 0 5%;
+
+        .SkillChart {
+            flex: 1;
+            margin-bottom: 0;
+        }
     }
 }

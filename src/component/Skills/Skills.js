@@ -33,7 +33,7 @@ const skills = () => {
                 </div>
 
                 <div className={classes.SkillChart}>
-                    <TagCanvas width="800" height="800" />
+                    <TagCanvas />
                 </div>
             </div>
         </Wrapper>

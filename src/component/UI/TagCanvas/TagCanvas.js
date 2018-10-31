@@ -7,11 +7,10 @@ class TagCanvas extends Component {
         try {
             window.TagCanvas.Start('skillChartCanvas', 'tags', options);
         } catch (e) {
-            // something went wrong, hide the canvas container
-            console.log(e);
             document.getElementById('skillChartContainer').style.display = 'none';
         }
     }
+
     render() {
         const tags = items.map(item => {
             return (
@@ -23,7 +22,7 @@ class TagCanvas extends Component {
         return (
             <React.Fragment>
                 <div id="skillChartContainer">
-                    <canvas width={this.props.width} height={this.props.height} id="skillChartCanvas">
+                    <canvas id="skillChartCanvas" width={getSize()} height={getSize()}>
                         <p>Tag Canvas</p>
                     </canvas>
                 </div>
@@ -84,5 +83,20 @@ const items = [
     'PostgreSQL',
     'GraphQL',
     'Jest',
-    'Material'
+    'Material',
+    'Webpack'
 ];
+
+const getSize = () => {
+    let w = window,
+        d = document,
+        e = d.documentElement,
+        g = d.getElementsByTagName('body')[0],
+        x = w.innerWidth || e.clientWidth || g.clientWidth;
+
+    if (x < 960) {
+        return 300;
+    } else {
+        return 700;
+    }
+};
