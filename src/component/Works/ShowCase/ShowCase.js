@@ -1,90 +1,128 @@
 import React, { Component } from 'react';
 import './ShowCase.scss';
 import mixitup from 'mixitup';
+import $ from 'jquery';
+import thumb1 from '../../../assets/img/thumb-1.jpg';
+import thumb2 from '../../../assets/img/thumb-2.jpg';
+import thumb3 from '../../../assets/img/thumb-3.jpg';
+import thumb4 from '../../../assets/img/thumb-4.jpg';
+import thumb5 from '../../../assets/img/thumb-5.jpg';
+import thumb6 from '../../../assets/img/thumb-6.jpg';
 
 class ShowCase extends Component {
     componentDidMount() {
+        const firstTab = document.getElementsByClassName('filter')[0];
+        this.posFilterBar(firstTab);
         var containerEl = document.querySelector('.showcase-container');
         mixitup(containerEl);
     }
 
+    changeTab = e => {
+        this.posFilterBar(e.target);
+    };
+
+    posFilterBar = element => {
+        var origin = $(element)
+            .parent()
+            .offset().left;
+        var pos = $(element).offset().left;
+        $('.float-bar').css({
+            left: pos - origin,
+            width: $(element).innerWidth()
+        });
+        $('.float-bar .row').css('left', (pos - origin) * -1);
+    };
+
     render() {
-        const cards = projects.map(prj => {
+        const cards = projects.map((prj, idx) => {
             return (
-                <div class={['mix', prj.category].join(' ')} style={{ background: prj.thumb }}>
-                    {prj.name}
+                <div key={idx} className={['mix', ...prj.category].join(' ')}>
+                    <img src={prj.thumb} alt="project thumbnail" />
+                </div>
+            );
+        });
+        const tabs = Object.keys(categories).map(key => {
+            return (
+                <div key={key} className="filter" data-filter={`.${categories[key]}`} onClick={this.changeTab}>
+                    {key.toUpperCase()}
                 </div>
             );
         });
         return (
-            <React.Fragment>
-                <div class="controls">
-                    <button type="button" class="control" data-filter="all">
-                        All
-                    </button>
-                    <button type="button" class="control" data-filter=".js">
-                        Green
-                    </button>
-                    <button type="button" class="control" data-filter=".react">
-                        Blue
-                    </button>
-                    <button type="button" class="control" data-filter=".node">
-                        Pink
-                    </button>
-                    <button type="button" class="control" data-filter=".design">
-                        None
-                    </button>
+            <div className="showcase">
+                <div className="filter-wrap">
+                    <div className="flex row">
+                        <div className="filter" data-filter="all" onClick={this.changeTab}>
+                            ALL
+                        </div>
+                        {tabs}
+                    </div>
+                    <div className="float-bar">
+                        <div className="flex row">
+                            <div className="filter" data-filter="all">
+                                ALL
+                            </div>
+                            {tabs}
+                        </div>
+                    </div>
                 </div>
 
-                <div class="showcase-container">{cards}</div>
-            </React.Fragment>
+                <div className="showcase-container">{cards}</div>
+            </div>
         );
     }
 }
 
 export default ShowCase;
 
+const categories = {
+    javascript: 'js',
+    node: 'node',
+    react: 'react',
+    design: 'design'
+};
+
 const projects = [
     {
-        thumb: 'red',
+        thumb: thumb1,
         github: '',
         name: 'Forkify',
-        catagoryDisplay: '',
-        category: 'js react'
+        categoryDisplay: 'React + Webpack',
+        category: [categories.react, categories.javascript]
     },
     {
-        thumb: 'blue',
+        thumb: thumb2,
         github: '',
         name: 'Node master class',
-        catagoryDisplay: '',
-        category: 'node js'
+        categoryDisplay: 'Node + JS',
+        category: [categories.node]
     },
     {
-        thumb: 'purple',
+        thumb: thumb3,
         github: '',
         name: 'Hamburger',
-        catagoryDisplay: '',
-        category: 'js react'
+        categoryDisplay: 'React only',
+        category: [categories.react, categories.javascript]
     },
     {
-        thumb: 'black',
+        thumb: thumb4,
         github: '',
         name: 'Fullstack course',
-        catagoryDisplay: '',
-        category: 'js node react'
+        categoryDisplay: 'Node + React + JS',
+        category: [categories.react, categories.javascript, categories.node]
     },
     {
-        thumb: 'yellow',
+        thumb: thumb5,
         github: '',
         name: 'Web dev',
-        catagoryDisplay: '',
-        category: 'design'
+        categoryDisplay: 'HTML/CSS',
+        category: [categories.design]
     },
     {
-        thumb: 'green',
+        thumb: thumb6,
         github: '',
         name: 'Wallet',
-        catagoryDisplay: '',
-        category: 'js'
+        categoryDisplay: 'Pure Javascript',
+        category: [categories.javascript]
     }
 ];

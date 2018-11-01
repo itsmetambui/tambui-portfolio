@@ -1,88 +1,50 @@
-.controls {
-    padding: 1rem;
-    background: #333;
-    font-size: 0.1px;
+/* Tab
+---------------------------------------------------------------------- */
+.showcase {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-
-.control {
-    position: relative;
+.filter-wrap {
     display: inline-block;
-    width: 2.7rem;
-    height: 2.7rem;
-    background: #444;
-    cursor: pointer;
-    font-size: 0.1px;
-    color: white;
-    transition: background 150ms;
-}
+    position: relative;
+    margin: 0 auto 50px 0;
+    z-index: 10;
 
-.control:hover {
-    background: #3f3f3f;
-}
+    .flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-.control[data-filter]:after {
-    content: '';
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    top: calc(50% - 6px);
-    left: calc(50% - 6px);
-    border: 2px solid currentColor;
-    border-radius: 2px;
-    background: currentColor;
-    transition: background-color 150ms, border-color 150ms;
-}
+    .row {
+        flex-direction: row;
+    }
 
-.control[data-sort]:after {
-    content: '';
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    border-top: 2px solid;
-    border-left: 2px solid;
-    top: calc(50% - 6px);
-    left: calc(50% - 6px);
-    transform: translateY(1px) rotate(45deg);
-}
+    .filter {
+        display: inline-block;
+        padding: 5px 5px;
+        margin: 0 5px;
+        font-size: 12px;
+        cursor: pointer;
+    }
 
-.control[data-sort*=':desc']:after {
-    transform: translateY(-4px) rotate(-135deg);
-}
+    .float-bar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #ff7400;
+        overflow: hidden;
+        height: 100%;
+        margin: auto 0;
+        z-index: 12;
+        transition: all 0.5s ease-in-out;
 
-.mixitup-control-active {
-    background: #393939;
-}
-
-.mixitup-control-active[data-filter]:after {
-    background: transparent;
-}
-
-.control:first-of-type {
-    border-radius: 3px 0 0 3px;
-}
-
-.control:last-of-type {
-    border-radius: 0 3px 3px 0;
-}
-
-.control[data-filter] + .control[data-sort] {
-    margin-left: 0.75rem;
-}
-
-.control[data-filter='.green'] {
-    color: #91e6c7;
-}
-
-.control[data-filter='.blue'] {
-    color: #5ecdde;
-}
-
-.control[data-filter='.pink'] {
-    color: #d595aa;
-}
-
-.control[data-filter='none'] {
-    color: #2f2f2f;
+        .row {
+            position: absolute;
+            transition: left 0.5s ease-in-out;
+        }
+    }
 }
 
 /* Container
@@ -110,46 +72,56 @@
 }
 
 .mix {
-    background: #fff;
-    border-top: 0.5rem solid currentColor;
-    border-radius: 2px;
-    margin-bottom: 1rem;
+    height: 300px;
     position: relative;
-}
+    overflow: hidden;
 
-.mix:before {
-    content: '';
-    display: inline-block;
-    padding-top: 56.25%;
-}
+    img {
+        width: 100%;
+        transform: scale(1.15);
+        transition: all 0.5s ease-in-out;
+        opacity: 0.7;
+        background-color: black;
 
-.mix.green {
-    color: #91e6c7;
-}
-
-.mix.pink {
-    color: #d595aa;
-}
-
-.mix.blue {
-    color: #5ecdde;
+        &:hover {
+            opacity: 1;
+            transform: scale(1.03);
+        }
+    }
 }
 
 /* Grid Breakpoints
 ---------------------------------------------------------------------- */
 
-/* 2 Columns */
+/* 1 Column */
 
 .mix,
 .gap {
-    width: calc(100% / 2 - (((2 - 1) * 1rem) / 2));
+    width: calc(100% / 1 - (((1 - 1) * 1rem) / 1));
 }
-
-/* 3 Columns */
 
 @media screen and (min-width: 541px) {
     .mix,
     .gap {
+        width: calc(100% / 2 - (((2 - 1) * 1rem) / 2));
+    }
+}
+
+/* 3 Columns */
+
+@media screen and (min-width: 769px) {
+    .mix,
+    .gap {
         width: calc(100% / 3 - (((3 - 1) * 1rem) / 3));
+    }
+
+    .filter-wrap {
+        margin: 0 auto 90px -25px;
+
+        .filter {
+            padding: 5px 50px;
+            margin: 0 25px;
+            font-size: 18px;
+        }
     }
 }
