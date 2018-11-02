@@ -84,7 +84,8 @@ const items = [
     'GraphQL',
     'Jest',
     'Material',
-    'Webpack'
+    'Webpack',
+    'Elasticsearch'
 ];
 
 const getSize = () => {
