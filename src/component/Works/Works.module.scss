@@ -2,6 +2,7 @@
     padding: 60px 0;
     width: 90%;
     margin: 0 auto;
+    animation: pageLoad 1s;
 }
 
 .Memo {
@@ -12,5 +13,16 @@
     a {
         color: #ff7400;
         text-decoration: underline;
+    }
+}
+
+@keyframes pageLoad {
+    from {
+        opacity: 0;
+        transform: scale3d(0.5, 0.5, 0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale3d(1, 1, 1);
     }
 }
