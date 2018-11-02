@@ -35,7 +35,6 @@ class Contact extends Component {
                                     <span />
                                 </div>
                             </div>
-                            <input type="hidden" name="_next" value="/" />
                             <button className={classes.Submit} type="submit">
                                 Send
                             </button>
