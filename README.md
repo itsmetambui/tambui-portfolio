@@ -1,4 +1,7 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# PORTFOLIO - ITSMETAMBUI
+A personal portfolio project to showcase my fullstack skills (React/Node/HTML/CSS)
+
+Live demo [here](https://itsmetambui.now.sh/)
 
 ## Available Scripts
 
