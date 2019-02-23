@@ -3,6 +3,15 @@ A personal portfolio project to showcase my fullstack skills (React/Node/HTML/CS
 
 Live demo [here](https://itsmetambui.now.sh/)
 
+## Deployment
+
+This repo contains now.sh to deploy to [Now](https://zeit.co/now), simply run
+
+```
+yarn build:css
+now
+```
+
 ## Available Scripts
 
 In the project directory, you can run:
