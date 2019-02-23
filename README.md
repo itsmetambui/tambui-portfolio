@@ -1,4 +1,7 @@
-Running live at: https://itsmetambui.herokuapp.com/
+# Natours
+A personal portfolio project to showcase my fullstack skills (React/Node/HTML/CSS)
+
+Live demo [here](https://itsmetambui.now.sh/)
 
 ## Available Scripts
 
