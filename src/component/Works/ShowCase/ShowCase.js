@@ -39,6 +39,15 @@ class ShowCase extends Component {
             return (
                 <div key={idx} className={['mix', ...prj.category].join(' ')}>
                     <img src={prj.thumb} alt="project thumbnail" />
+                    <div className="links">
+                        {prj.inprogress ? 
+                            <p>In progress</p> :
+                            <>
+                                <a href={prj.github} target="_blank" rel="noopener noreferrer">Github</a>
+                                <a href={prj.live} target="_blank" rel="noopener noreferrer">Live</a>   
+                            </>
+                        }
+                    </div>
                 </div>
             );
         });
@@ -88,6 +97,7 @@ const projects = [
     {
         thumb: natoursImg,
         github: 'https://github.com/itsmetambui/natours',
+        live: 'https://tb-natours.now.sh/',
         name: 'Natours',
         categoryDisplay: 'HTML/CSS',
         category: [categories.pure]
@@ -95,6 +105,7 @@ const projects = [
     {
         thumb: trillioImg,
         github: 'https://github.com/itsmetambui/trillio',
+        live: 'https://tb-trillio.now.sh/',
         name: 'Trillio',
         categoryDisplay: 'HTML/CSS',
         category: [categories.pure]
@@ -102,6 +113,7 @@ const projects = [
     {
         thumb: spacexplorerImg,
         github: 'https://github.com/itsmetambui/spacexplorer',
+        live: 'https://spacexplorer.now.sh/',
         name: 'Spacexplorer',
         categoryDisplay: 'React + Express + GraphQL',
         category: [categories.react, categories.node, categories.graphql]
@@ -109,6 +121,7 @@ const projects = [
     {
         thumb: ilovelampImg,
         github: 'https://github.com/itsmetambui/react-demo-store',
+        live: 'https://tb-ilovelamp.now.sh',
         name: 'I Love Lamp',
         categoryDisplay: 'React + Redux',
         category: [categories.react, categories.redux]
@@ -116,6 +129,7 @@ const projects = [
     {
         thumb: vutachatImg,
         github: 'https://github.com/itsmetambui/vutachat',
+        live: 'https://vutachat.herokuapp.com/',
         name: 'Vutachat',
         categoryDisplay: 'React + Node',
         category: [categories.react, categories.node]
@@ -123,8 +137,10 @@ const projects = [
     {
         thumb: feedorImg,
         github: 'https://github.com/itsmetambui/feedor',
+        live: 'https://feedor.herokuapp.com/',
         name: 'Feedor',
         categoryDisplay: 'React + Redux + Loopback',
+        inprogress: true,
         category: [categories.react, categories.redux, categories.node]
     }
 ];
