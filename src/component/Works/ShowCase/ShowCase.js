@@ -2,12 +2,13 @@ import React, { Component } from 'react';
 import './ShowCase.scss';
 import mixitup from 'mixitup';
 import $ from 'jquery';
-import thumb1 from '../../../assets/img/thumb-1.jpg';
-import thumb2 from '../../../assets/img/thumb-2.jpg';
-import thumb3 from '../../../assets/img/thumb-3.jpg';
-import thumb4 from '../../../assets/img/thumb-4.jpg';
-import thumb5 from '../../../assets/img/thumb-5.jpg';
-import thumb6 from '../../../assets/img/thumb-6.jpg';
+
+import natoursImg from '../../../assets/img/natours.png';
+import trillioImg from '../../../assets/img/trillio.png';
+import ilovelampImg from '../../../assets/img/ilovelamp.png';
+import vutachatImg from '../../../assets/img/vutachat.png';
+import spacexplorerImg from '../../../assets/img/spacexplorer.png';
+import feedorImg from '../../../assets/img/feedor.png';
 
 class ShowCase extends Component {
     componentDidMount() {
@@ -44,7 +45,7 @@ class ShowCase extends Component {
         const tabs = Object.keys(categories).map(key => {
             return (
                 <div key={key} className="filter" data-filter={`.${categories[key]}`} onClick={this.changeTab}>
-                    {key.toUpperCase()}
+                    {categories[key].toUpperCase()}
                 </div>
             );
         });
@@ -76,53 +77,54 @@ class ShowCase extends Component {
 export default ShowCase;
 
 const categories = {
-    javascript: 'js',
     node: 'node',
     react: 'react',
-    design: 'design'
+    redux: 'redux',
+    graphql: 'graphql',
+    pure: 'css'
 };
 
 const projects = [
     {
-        thumb: thumb1,
-        github: '',
-        name: 'Forkify',
-        categoryDisplay: 'React + Webpack',
-        category: [categories.react, categories.javascript]
-    },
-    {
-        thumb: thumb2,
-        github: '',
-        name: 'Node master class',
-        categoryDisplay: 'Node + JS',
-        category: [categories.node]
-    },
-    {
-        thumb: thumb3,
-        github: '',
-        name: 'Hamburger',
-        categoryDisplay: 'React only',
-        category: [categories.react, categories.javascript]
-    },
-    {
-        thumb: thumb4,
-        github: '',
-        name: 'Fullstack course',
-        categoryDisplay: 'Node + React + JS',
-        category: [categories.react, categories.javascript, categories.node]
-    },
-    {
-        thumb: thumb5,
-        github: '',
-        name: 'Web dev',
+        thumb: natoursImg,
+        github: 'https://github.com/itsmetambui/natours',
+        name: 'Natours',
         categoryDisplay: 'HTML/CSS',
-        category: [categories.design]
+        category: [categories.pure]
     },
     {
-        thumb: thumb6,
-        github: '',
-        name: 'Wallet',
-        categoryDisplay: 'Pure Javascript',
-        category: [categories.javascript]
+        thumb: trillioImg,
+        github: 'https://github.com/itsmetambui/trillio',
+        name: 'Trillio',
+        categoryDisplay: 'HTML/CSS',
+        category: [categories.pure]
+    },
+    {
+        thumb: spacexplorerImg,
+        github: 'https://github.com/itsmetambui/spacexplorer',
+        name: 'Spacexplorer',
+        categoryDisplay: 'React + Express + GraphQL',
+        category: [categories.react, categories.node, categories.graphql]
+    },
+    {
+        thumb: ilovelampImg,
+        github: 'https://github.com/itsmetambui/react-demo-store',
+        name: 'I Love Lamp',
+        categoryDisplay: 'React + Redux',
+        category: [categories.react, categories.redux]
+    },
+    {
+        thumb: vutachatImg,
+        github: 'https://github.com/itsmetambui/vutachat',
+        name: 'Vutachat',
+        categoryDisplay: 'React + Node',
+        category: [categories.react, categories.node]
+    },
+    {
+        thumb: feedorImg,
+        github: 'https://github.com/itsmetambui/feedor',
+        name: 'Feedor',
+        categoryDisplay: 'React + Redux + Loopback',
+        category: [categories.react, categories.redux, categories.node]
     }
 ];
