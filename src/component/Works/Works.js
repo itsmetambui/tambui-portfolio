@@ -11,7 +11,7 @@ const works = () => {
                 <ShowCase />
             </div>
             <p className={classes.Memo}>
-                These are just samples, want to help transfer them to real project? Please{' '}
+                If you have any project ideas and want to convert it to real applications ? Please{' '}
                 <Link to="/contact">contact</Link> me :)
             </p>
         </div>

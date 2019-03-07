@@ -7,7 +7,7 @@ import marker from '../../../assets/img/marker.png';
 const MyMapComponent = compose(
     withProps({
         googleMapURL:
-            'https://maps.googleapis.com/maps/api/js?key=AIzaSyCNJ7NTt_3OySh6ifbWlnRguAqnlAtD_qU&v=3.exp&libraries=geometry,drawing,places',
+            `https://maps.googleapis.com/maps/api/js?key=${process.env.REACT_APP_MAP_KEY}&libraries=geometry,drawing,places`,
         loadingElement: <div style={{ height: `100%` }} />,
         containerElement: <div style={{ height: `100%`, padding: `50px` }} />,
         mapElement: <div style={{ height: `100%` }} />
