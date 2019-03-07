@@ -30,17 +30,15 @@ const about = () => {
 
                     <p className={classes.Journey}>
                         Two years later I moved to Can Tho and started to work for{' '}
-                        <a href="https://www.axonactive.com/" target="_blank" rel="noopener noreferrer">
-                            Axon Active Vietnam
+                        <a href="https://codeberryschool.com/" target="_blank" rel="noopener noreferrer">
+                            CodeBerry code school
                         </a>
-                        . Here, as a multipnational team, we applied Agile development through Scrum framework, develop
-                        and deploy Fintech applications for Swiss partners.
+                        . Here, we work as a multi-national, 100% remote team, applied Agile development through Scrum framework deliver features to teach people coding.
                     </p>
 
                     <p className={classes.Journey}>
                         I'm currently resigned from work to study and round out my skills to become a fullstack
-                        developer, looking for the right opportunity to bring my expertise to a well-established
-                        company.
+                        developer, looking for growth opportunities from a remote team-based environment.
                     </p>
                 </div>
                 <div className={classes.ImageArea}>
