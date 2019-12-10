@@ -40,11 +40,11 @@ class ShowCase extends Component {
                 <div key={idx} className={['mix', ...prj.category].join(' ')}>
                     <img src={prj.thumb} alt="project thumbnail" />
                     <div className="links">
-                        {prj.inprogress ? 
+                        {prj.inprogress ?
                             <p>In progress</p> :
                             <>
                                 <a href={prj.github} target="_blank" rel="noopener noreferrer">Github</a>
-                                <a href={prj.live} target="_blank" rel="noopener noreferrer">Live</a>   
+                                <a href={prj.live} target="_blank" rel="noopener noreferrer">Live</a>
                             </>
                         }
                     </div>
@@ -86,11 +86,8 @@ class ShowCase extends Component {
 export default ShowCase;
 
 const categories = {
-    node: 'node',
-    react: 'react',
-    redux: 'redux',
-    graphql: 'graphql',
-    pure: 'css'
+    personal: 'personal',
+    work: 'work',
 };
 
 const projects = [
@@ -100,7 +97,7 @@ const projects = [
         live: 'https://tb-natours.now.sh/',
         name: 'Natours',
         categoryDisplay: 'HTML/CSS',
-        category: [categories.pure]
+        category: [categories.personal]
     },
     {
         thumb: trillioImg,
@@ -108,7 +105,7 @@ const projects = [
         live: 'https://tb-trillio.now.sh/',
         name: 'Trillio',
         categoryDisplay: 'HTML/CSS',
-        category: [categories.pure]
+        category: [categories.personal]
     },
     {
         thumb: spacexplorerImg,
@@ -116,7 +113,7 @@ const projects = [
         live: 'https://spacexplorer.now.sh/',
         name: 'Spacexplorer',
         categoryDisplay: 'React + Express + GraphQL',
-        category: [categories.react, categories.node, categories.graphql]
+        category: [categories.personal]
     },
     {
         thumb: ilovelampImg,
@@ -124,7 +121,7 @@ const projects = [
         live: 'https://tb-ilovelamp.now.sh',
         name: 'I Love Lamp',
         categoryDisplay: 'React + Redux',
-        category: [categories.react, categories.redux]
+        category: [categories.personal]
     },
     {
         thumb: vutachatImg,
@@ -132,7 +129,7 @@ const projects = [
         live: 'https://vutachat.herokuapp.com/',
         name: 'Vutachat',
         categoryDisplay: 'React + Node',
-        category: [categories.react, categories.node]
+        category: [categories.personal]
     },
     {
         thumb: feedorImg,
@@ -141,6 +138,6 @@ const projects = [
         name: 'Feedor',
         categoryDisplay: 'React + Redux + Loopback',
         inprogress: true,
-        category: [categories.react, categories.redux, categories.node]
-    }
+        category: [categories.work]
+    },
 ];

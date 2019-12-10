@@ -9,23 +9,18 @@ const about = () => {
         <Wrapper>
             <div className={classes.About}>
                 <div className={classes.TextArea}>
-                    <Header text="About me" />
+                    <Header text="My dev career" />
 
                     <p className={classes.Journey}>
-                        A highly driven and motivated developer with over three years’ experience in web development.
+                        A highly driven and motivated developer with over four years’ experience in web development.
                     </p>
                     <p className={classes.Journey}>
                         In 2016, I got my first job as a junior frontend developer at{' '}
                         <a href="https://www.tma.vn/" target="_blank" rel="noopener noreferrer">
                             TMA Solutions
                         </a>{' '}
-                        in HCM, Vietnam. I had the chance working with highly experienced partners like Nokia, building
-                        large Single Page Applications for networking.
-                    </p>
-
-                    <p className={classes.Journey}>
-                        While woking at TMA Solution, I was also exposed to backend development with dockerization and
-                        continous delivery.
+                        in HCM, Vietnam. I had the opportunity working with highly experienced partners like Nokia, building
+                        large Single Page Applications for networking management solutions.
                     </p>
 
                     <p className={classes.Journey}>
@@ -33,12 +28,16 @@ const about = () => {
                         <a href="https://codeberryschool.com/" target="_blank" rel="noopener noreferrer">
                             CodeBerry code school
                         </a>
-                        . Here, we work as a multi-national, 100% remote team, applied Agile development through Scrum framework deliver features to teach people coding.
+                        . Here, we work as a multi-national, 100% remote team, applied Agile development through Scrum framework, develop interactive coding education platform.
                     </p>
 
                     <p className={classes.Journey}>
-                        I'm currently resigned from work to study and round out my skills to become a fullstack
-                        developer, looking for growth opportunities from a remote team-based environment.
+                        From 2019,{' '}
+                        <a href="http://spacestep.ca//" target="_blank" rel="noopener noreferrer">
+                            Spacestep
+                        </a>
+                        , a remote dev agency, became my new challenge. Here I can round out my skill as a fullstack developer,
+                        with various freelancing projects.
                     </p>
                 </div>
                 <div className={classes.ImageArea}>

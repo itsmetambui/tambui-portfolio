@@ -61,7 +61,6 @@ const items = [
     'REST',
     'AJAX',
     'JSON',
-    'XML',
     'Angular JS',
     'Node JS',
     'Express',
@@ -69,15 +68,13 @@ const items = [
     'React',
     'Bootstrap',
     'SASS',
-    'RWD',
     'Mongo DB',
     'Karma',
     'Jest',
     'Gulp',
     'npm',
     'Bower',
-    'BEM',
-    'Canvas',
+    'Redux',
     'Spring',
     'Java',
     'PostgreSQL',
@@ -85,7 +82,9 @@ const items = [
     'Jest',
     'Material',
     'Webpack',
-    'Elasticsearch'
+    'Elasticsearch',
+    'Nestjs',
+    'AWS'
 ];
 
 const getSize = () => {

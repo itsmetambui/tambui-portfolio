@@ -14,21 +14,15 @@ const skills = () => {
 
                     <p className={classes.Journey}>
                         Main area of my expertise is front end development and everything related with web development.
-                        HTML, CSS, JS (ES5, ES6), building small & medium Web Apps, Angular, React.
+                        HTML, CSS, JS (ES5, ES6), building single page web applications with Angular, React...
                     </p>
                     <p className={classes.Journey}>
-                        Often I work as a full-stack developer - mainly in Java or Node with framework like Spring,
-                        Express...
-                    </p>
-
-                    <p className={classes.Journey}>
-                        I have also some experience working with databases like PostgreSQL, MongoBD or GraphQL.
+                        Often I work as a full-stack developer, experienced with backend development with Java, Node, and frameworks like
+                        Express, Nestjs, and Spring.
                     </p>
 
                     <p className={classes.Journey}>
-                        Would like to know more?
-                        <br />
-                        Please just <Link to="/contact">contact</Link> me.
+                        I have also some experience working with databases like PostgreSQL, MongoBD.
                     </p>
                 </div>
 

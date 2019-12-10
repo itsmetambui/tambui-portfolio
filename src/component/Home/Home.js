@@ -17,7 +17,10 @@ const home = () => {
                         web developer.
                     </h1>
                     <p className={classes.Title}>
-                        Fullstack developer /<span> Angular / React / Node</span>
+                        Fullstack developer /
+                        <span> React / Node /</span>
+                        <span> Mongo / Postgres /</span>
+                        <span> AWS / Docker ...</span>
                     </p>
                     <Link className={classes.Contact} to="/contact">
                         Contact me
