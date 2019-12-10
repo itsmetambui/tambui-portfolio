@@ -3,7 +3,6 @@ import Wrapper from '../UI/Wrapper/Wrapper';
 import Header from '../UI/Header/Header';
 import classes from './Skills.module.scss';
 import TagCanvas from '../UI/TagCanvas/TagCanvas';
-import { Link } from 'react-router-dom';
 
 const skills = () => {
     return (
